@@ -8,12 +8,15 @@
 
 /* Begin PBXBuildFile section */
 		C5A736511EBE21C0000D00E9 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A736501EBE21C0000D00E9 /* AppDelegate.swift */; };
-		C5A736531EBE21C0000D00E9 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A736521EBE21C0000D00E9 /* ViewController.swift */; };
 		C5A736561EBE21C0000D00E9 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A736541EBE21C0000D00E9 /* Main.storyboard */; };
 		C5A736581EBE21C0000D00E9 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C5A736571EBE21C0000D00E9 /* Assets.xcassets */; };
 		C5A7365B1EBE21C0000D00E9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C5A736591EBE21C0000D00E9 /* LaunchScreen.storyboard */; };
 		C5A736661EBE21C0000D00E9 /* QrBillTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A736651EBE21C0000D00E9 /* QrBillTests.swift */; };
 		C5A736711EBE21C0000D00E9 /* QrBillUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A736701EBE21C0000D00E9 /* QrBillUITests.swift */; };
+		C5A736811EBE3728000D00E9 /* ReadQrCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A736801EBE3728000D00E9 /* ReadQrCode.swift */; };
+		C5A736831EBE3C6E000D00E9 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A736821EBE3C6E000D00E9 /* ResultTableViewController.swift */; };
+		C5A736871EBE6CAE000D00E9 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A736861EBE6CAE000D00E9 /* MenuItem.swift */; };
+		C5A736891EBE6F1A000D00E9 /* parceJSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A736881EBE6F1A000D00E9 /* parceJSONData.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +39,6 @@
 /* Begin PBXFileReference section */
 		C5A7364D1EBE21C0000D00E9 /* QrBill.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = QrBill.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A736501EBE21C0000D00E9 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C5A736521EBE21C0000D00E9 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C5A736551EBE21C0000D00E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C5A736571EBE21C0000D00E9 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C5A7365A1EBE21C0000D00E9 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +49,10 @@
 		C5A7366C1EBE21C0000D00E9 /* QrBillUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = QrBillUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C5A736701EBE21C0000D00E9 /* QrBillUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QrBillUITests.swift; sourceTree = "<group>"; };
 		C5A736721EBE21C0000D00E9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C5A736801EBE3728000D00E9 /* ReadQrCode.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReadQrCode.swift; path = ../ReadQrCode.swift; sourceTree = "<group>"; };
+		C5A736821EBE3C6E000D00E9 /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
+		C5A736861EBE6CAE000D00E9 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
+		C5A736881EBE6F1A000D00E9 /* parceJSONData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parceJSONData.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -98,7 +104,10 @@
 			isa = PBXGroup;
 			children = (
 				C5A736501EBE21C0000D00E9 /* AppDelegate.swift */,
-				C5A736521EBE21C0000D00E9 /* ViewController.swift */,
+				C5A736801EBE3728000D00E9 /* ReadQrCode.swift */,
+				C5A736821EBE3C6E000D00E9 /* ResultTableViewController.swift */,
+				C5A736881EBE6F1A000D00E9 /* parceJSONData.swift */,
+				C5A736861EBE6CAE000D00E9 /* MenuItem.swift */,
 				C5A736541EBE21C0000D00E9 /* Main.storyboard */,
 				C5A736571EBE21C0000D00E9 /* Assets.xcassets */,
 				C5A736591EBE21C0000D00E9 /* LaunchScreen.storyboard */,
@@ -193,6 +202,7 @@
 				TargetAttributes = {
 					C5A7364C1EBE21C0000D00E9 = {
 						CreatedOnToolsVersion = 8.3.2;
+						DevelopmentTeam = 9VM57AG273;
 						ProvisioningStyle = Automatic;
 					};
 					C5A736601EBE21C0000D00E9 = {
@@ -259,8 +269,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C5A736531EBE21C0000D00E9 /* ViewController.swift in Sources */,
+				C5A736831EBE3C6E000D00E9 /* ResultTableViewController.swift in Sources */,
+				C5A736891EBE6F1A000D00E9 /* parceJSONData.swift in Sources */,
+				C5A736871EBE6CAE000D00E9 /* MenuItem.swift in Sources */,
 				C5A736511EBE21C0000D00E9 /* AppDelegate.swift in Sources */,
+				C5A736811EBE3728000D00E9 /* ReadQrCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +425,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9VM57AG273;
 				INFOPLIST_FILE = QrBill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DevChallenge.QrBill;
@@ -424,6 +438,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 9VM57AG273;
 				INFOPLIST_FILE = QrBill/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = DevChallenge.QrBill;
