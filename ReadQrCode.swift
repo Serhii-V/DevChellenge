@@ -1,11 +1,3 @@
-//
-//  ReadQrCode.swift
-//  QrBill
-//
-//  Created by Serhii on 5/6/17.
-//  Copyright © 2017 DevChallenge. All rights reserved.
-//
-
 import UIKit
 import AVFoundation
 import Foundation
@@ -19,10 +11,10 @@ class ReadQrCode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     var videoPreviewLaer: AVCaptureVideoPreviewLayer?
     var qrCodeFrameView: UIView?
     
-
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
         readQrCode()
         
         
@@ -105,7 +97,7 @@ class ReadQrCode: UIViewController, AVCaptureMetadataOutputObjectsDelegate {
     override func viewWillDisappear(_ animated: Bool) {
         self.captureSession?.stopRunning()
     }
-
+    
 }
 
 

@@ -1,12 +1,6 @@
-//
-//  ResultTableViewController.swift
-//  QrBill
-//
-//  Created by Serhii on 5/6/17.
-//  Copyright © 2017 DevChallenge. All rights reserved.
-//
-
 import UIKit
+
+var globalValue = [MenuItem]()
 
 class ResultTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, XMLParserDelegate{
 
@@ -25,8 +19,10 @@ class ResultTableViewController: UIViewController, UITableViewDelegate, UITableV
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-                cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.text = "123"//"Item: \(menuItem[indexPath.row].name) " + " Price: \(menuItem[indexPath.row].price) " + "\n" + " Quantity: \(menuItem[indexPath.row].quantity) " + " Sum:\(Double(menuItem[indexPath.row].price) * Double(menuItem[indexPath.row].quantity) ) "
+        cell.textLabel?.numberOfLines = 0
+        
+      
+       // cell.textLabel?.text = "Item: \(menuItem[indexPath.row].name) " + " Price: \(menuItem[indexPath.row].price) " + "\n" + " Quantity: \(menuItem[indexPath.row].quantity) "// + " Sum:\(Double(menuItem[indexPath.row].price) * Double(menuItem[indexPath.row].quantity) ) "
         
         return cell
     }
@@ -35,11 +31,12 @@ class ResultTableViewController: UIViewController, UITableViewDelegate, UITableV
         return 4
     }
     
+    
+    
     func prepereDataForCell() {
         let nsStringQrData = NSString(string: "\(qrData!)")
         let qrDataLikeNsData: NSData = nsStringQrData.data(using: String.Encoding.utf8.rawValue)! as NSData
-        print("\(qrDataLikeNsData)" + "_____________")
-        
+
         let typeOfData = defineDataType()
         
         switch typeOfData {
@@ -52,12 +49,20 @@ class ResultTableViewController: UIViewController, UITableViewDelegate, UITableV
             menuItem = xmlParce(sourceString: "\(nsStringQrData)")
             break
         case "https_XML":
-            print("Fuck xml vs http parsing")
+            print("Fuck xml vs https parsing")
+            break
+        case "https_JSON":
+            
+            menuItem = getJsonAndParceFromHttps()
+            for i in menuItem {
+                print(i.name)
+                print(i.price)
+                print(i.quantity)
+            }
+            print("Json vs https parsing")
             break
         default:
-            menuItem =  parceJsonData(data: getDataFromHttps())
-                    print("Ololo")
-
+            print("Ololo")
         }
         
   

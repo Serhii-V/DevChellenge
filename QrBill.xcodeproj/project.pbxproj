@@ -109,10 +109,10 @@
 		C5A7364F1EBE21C0000D00E9 /* QrBill */ = {
 			isa = PBXGroup;
 			children = (
-				C5A736921EBEA9B3000D00E9 /* GetDataFromHttps.swift */,
 				C5A736501EBE21C0000D00E9 /* AppDelegate.swift */,
 				C5A736821EBE3C6E000D00E9 /* ResultTableViewController.swift */,
 				C5A7368A1EBE82FC000D00E9 /* parceXMLData.swift */,
+				C5A736921EBEA9B3000D00E9 /* GetDataFromHttps.swift */,
 				C5A736881EBE6F1A000D00E9 /* parceJSONData.swift */,
 				C5A7368E1EBEA0B6000D00E9 /* defineOfData.swift */,
 				C5A736861EBE6CAE000D00E9 /* MenuItem.swift */,
