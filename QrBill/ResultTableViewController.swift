@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ResultTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource {
+class ResultTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, XMLParserDelegate{
 
     var menuItem = [MenuItem]()
     var reverseMenuItem = [MenuItem]()
@@ -23,11 +23,31 @@ class ResultTableViewController: UIViewController, UITableViewDelegate, UITableV
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
         let nsStringQrData: NSString = NSString(string: "\(qrData!)")
-        let qrDataLikeNsData: NSData = nsStringQrData.data(using: String.Encoding.utf8.rawValue)! as NSData
+        //print("nsStringQrData: \(nsStringQrData)")
         
-        menuItem =  parceJsonData(data: qrDataLikeNsData)
+        let qrDataLikeNsData: NSData = nsStringQrData.data(using: String.Encoding.utf8.rawValue)! as NSData
+       // print("qrDataLikeNsData: \(qrDataLikeNsData)")
+       // print("qrData: \(qrData)")
+        
+        
+        
+        
+        let xmlData =  nsStringQrData.data(using: String.Encoding.utf8.rawValue)
+        let parser = XMLParser(data: xmlData!)
+        
+        parser.delegate = self
+        parser.parse()
+
+
+        let x :[String : String] = ["":""]
+        //menuItem =  parceJsonData(data: qrDataLikeNsData)
+        menuItem =  xmlPars(parser, didStartElement: "tag", namespaceURI: nil, qualifiedName: nil, attributes: x)
+        //print("\(menuItem[0])")
+        
+        
+        
         cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.text = "Item: \(menuItem[indexPath.row].name) " + " Price: \(menuItem[indexPath.row].price) " + "\n" + " Quantity: \(menuItem[indexPath.row].quantity) " + " Sum:\(Double(menuItem[indexPath.row].price) * Double(menuItem[indexPath.row].quantity) ) "
+        cell.textLabel?.text = defineDataType()//"Item: \(menuItem[indexPath.row].name) " + " Price: \(menuItem[indexPath.row].price) " + "\n" + " Quantity: \(menuItem[indexPath.row].quantity) " + " Sum:\(Double(menuItem[indexPath.row].price) * Double(menuItem[indexPath.row].quantity) ) "
         
         return cell
     }

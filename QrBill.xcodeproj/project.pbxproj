@@ -17,6 +17,9 @@
 		C5A736831EBE3C6E000D00E9 /* ResultTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A736821EBE3C6E000D00E9 /* ResultTableViewController.swift */; };
 		C5A736871EBE6CAE000D00E9 /* MenuItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A736861EBE6CAE000D00E9 /* MenuItem.swift */; };
 		C5A736891EBE6F1A000D00E9 /* parceJSONData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A736881EBE6F1A000D00E9 /* parceJSONData.swift */; };
+		C5A7368B1EBE82FC000D00E9 /* parceXMLData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A7368A1EBE82FC000D00E9 /* parceXMLData.swift */; };
+		C5A7368F1EBEA0B6000D00E9 /* defineOfData.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A7368E1EBEA0B6000D00E9 /* defineOfData.swift */; };
+		C5A736931EBEA9B3000D00E9 /* GetDataFromHttps.swift in Sources */ = {isa = PBXBuildFile; fileRef = C5A736921EBEA9B3000D00E9 /* GetDataFromHttps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -53,6 +56,9 @@
 		C5A736821EBE3C6E000D00E9 /* ResultTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultTableViewController.swift; sourceTree = "<group>"; };
 		C5A736861EBE6CAE000D00E9 /* MenuItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MenuItem.swift; sourceTree = "<group>"; };
 		C5A736881EBE6F1A000D00E9 /* parceJSONData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parceJSONData.swift; sourceTree = "<group>"; };
+		C5A7368A1EBE82FC000D00E9 /* parceXMLData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parceXMLData.swift; sourceTree = "<group>"; };
+		C5A7368E1EBEA0B6000D00E9 /* defineOfData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = defineOfData.swift; sourceTree = "<group>"; };
+		C5A736921EBEA9B3000D00E9 /* GetDataFromHttps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDataFromHttps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -83,6 +89,7 @@
 		C5A736441EBE21C0000D00E9 = {
 			isa = PBXGroup;
 			children = (
+				C5A736921EBEA9B3000D00E9 /* GetDataFromHttps.swift */,
 				C5A7364F1EBE21C0000D00E9 /* QrBill */,
 				C5A736641EBE21C0000D00E9 /* QrBillTests */,
 				C5A7366F1EBE21C0000D00E9 /* QrBillUITests */,
@@ -104,10 +111,12 @@
 			isa = PBXGroup;
 			children = (
 				C5A736501EBE21C0000D00E9 /* AppDelegate.swift */,
-				C5A736801EBE3728000D00E9 /* ReadQrCode.swift */,
+				C5A7368A1EBE82FC000D00E9 /* parceXMLData.swift */,
 				C5A736821EBE3C6E000D00E9 /* ResultTableViewController.swift */,
 				C5A736881EBE6F1A000D00E9 /* parceJSONData.swift */,
+				C5A7368E1EBEA0B6000D00E9 /* defineOfData.swift */,
 				C5A736861EBE6CAE000D00E9 /* MenuItem.swift */,
+				C5A736801EBE3728000D00E9 /* ReadQrCode.swift */,
 				C5A736541EBE21C0000D00E9 /* Main.storyboard */,
 				C5A736571EBE21C0000D00E9 /* Assets.xcassets */,
 				C5A736591EBE21C0000D00E9 /* LaunchScreen.storyboard */,
@@ -271,9 +280,12 @@
 			files = (
 				C5A736831EBE3C6E000D00E9 /* ResultTableViewController.swift in Sources */,
 				C5A736891EBE6F1A000D00E9 /* parceJSONData.swift in Sources */,
+				C5A736931EBEA9B3000D00E9 /* GetDataFromHttps.swift in Sources */,
 				C5A736871EBE6CAE000D00E9 /* MenuItem.swift in Sources */,
+				C5A7368B1EBE82FC000D00E9 /* parceXMLData.swift in Sources */,
 				C5A736511EBE21C0000D00E9 /* AppDelegate.swift in Sources */,
 				C5A736811EBE3728000D00E9 /* ReadQrCode.swift in Sources */,
+				C5A7368F1EBEA0B6000D00E9 /* defineOfData.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -9,7 +9,7 @@
 import Foundation
 
 func parceJsonData(data: NSData)  -> [MenuItem] {
-    var curentMenuItem = [MenuItem]()
+    var currentMenuItem = [MenuItem]()
     var tempMenuItem = [MenuItem]()
 
     do {
@@ -28,7 +28,7 @@ func parceJsonData(data: NSData)  -> [MenuItem] {
         print(error)
     }
     for i in 1...tempMenuItem.count {
-        curentMenuItem.append(tempMenuItem[tempMenuItem.count - i])
+        currentMenuItem.append(tempMenuItem[tempMenuItem.count - i])
     }
-    return curentMenuItem
+    return currentMenuItem
 }
