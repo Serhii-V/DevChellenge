@@ -16,38 +16,17 @@ class ResultTableViewController: UIViewController, UITableViewDelegate, UITableV
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        prepereDataForCell()
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "Cell", for: indexPath)
         
-        let nsStringQrData: NSString = NSString(string: "\(qrData!)")
-        //print("nsStringQrData: \(nsStringQrData)")
-        
-        let qrDataLikeNsData: NSData = nsStringQrData.data(using: String.Encoding.utf8.rawValue)! as NSData
-       // print("qrDataLikeNsData: \(qrDataLikeNsData)")
-       // print("qrData: \(qrData)")
-        
-        
-        
-        
-        let xmlData =  nsStringQrData.data(using: String.Encoding.utf8.rawValue)
-        let parser = XMLParser(data: xmlData!)
-        
-        parser.delegate = self
-        parser.parse()
-
-
-        let x :[String : String] = ["":""]
-        //menuItem =  parceJsonData(data: qrDataLikeNsData)
-        menuItem =  xmlPars(parser, didStartElement: "tag", namespaceURI: nil, qualifiedName: nil, attributes: x)
-        //print("\(menuItem[0])")
-        
-        
-        
-        cell.textLabel?.numberOfLines = 0
-        cell.textLabel?.text = defineDataType()//"Item: \(menuItem[indexPath.row].name) " + " Price: \(menuItem[indexPath.row].price) " + "\n" + " Quantity: \(menuItem[indexPath.row].quantity) " + " Sum:\(Double(menuItem[indexPath.row].price) * Double(menuItem[indexPath.row].quantity) ) "
+                cell.textLabel?.numberOfLines = 0
+        cell.textLabel?.text = "123"//"Item: \(menuItem[indexPath.row].name) " + " Price: \(menuItem[indexPath.row].price) " + "\n" + " Quantity: \(menuItem[indexPath.row].quantity) " + " Sum:\(Double(menuItem[indexPath.row].price) * Double(menuItem[indexPath.row].quantity) ) "
         
         return cell
     }
@@ -56,6 +35,33 @@ class ResultTableViewController: UIViewController, UITableViewDelegate, UITableV
         return 4
     }
     
+    func prepereDataForCell() {
+        let nsStringQrData = NSString(string: "\(qrData!)")
+        let qrDataLikeNsData: NSData = nsStringQrData.data(using: String.Encoding.utf8.rawValue)! as NSData
+        print("\(qrDataLikeNsData)" + "_____________")
+        
+        let typeOfData = defineDataType()
+        
+        switch typeOfData {
+        case "JSON":
+            print(nsStringQrData)
+            menuItem =  parceJsonData(data: qrDataLikeNsData)
+            break
+        case "XML":
+            print(nsStringQrData)
+            menuItem = xmlParce(sourceString: "\(nsStringQrData)")
+            break
+        case "https_XML":
+            print("Fuck xml vs http parsing")
+            break
+        default:
+            menuItem =  parceJsonData(data: getDataFromHttps())
+                    print("Ololo")
+
+        }
+        
+  
+    }
     
 
 }

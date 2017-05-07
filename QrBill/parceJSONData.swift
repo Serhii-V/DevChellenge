@@ -30,5 +30,6 @@ func parceJsonData(data: NSData)  -> [MenuItem] {
     for i in 1...tempMenuItem.count {
         currentMenuItem.append(tempMenuItem[tempMenuItem.count - i])
     }
+    print("Json was parsed")
     return currentMenuItem
 }

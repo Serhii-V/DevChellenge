@@ -58,7 +58,7 @@
 		C5A736881EBE6F1A000D00E9 /* parceJSONData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parceJSONData.swift; sourceTree = "<group>"; };
 		C5A7368A1EBE82FC000D00E9 /* parceXMLData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = parceXMLData.swift; sourceTree = "<group>"; };
 		C5A7368E1EBEA0B6000D00E9 /* defineOfData.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = defineOfData.swift; sourceTree = "<group>"; };
-		C5A736921EBEA9B3000D00E9 /* GetDataFromHttps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GetDataFromHttps.swift; sourceTree = "<group>"; };
+		C5A736921EBEA9B3000D00E9 /* GetDataFromHttps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = GetDataFromHttps.swift; path = ../GetDataFromHttps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -89,7 +89,6 @@
 		C5A736441EBE21C0000D00E9 = {
 			isa = PBXGroup;
 			children = (
-				C5A736921EBEA9B3000D00E9 /* GetDataFromHttps.swift */,
 				C5A7364F1EBE21C0000D00E9 /* QrBill */,
 				C5A736641EBE21C0000D00E9 /* QrBillTests */,
 				C5A7366F1EBE21C0000D00E9 /* QrBillUITests */,
@@ -110,9 +109,10 @@
 		C5A7364F1EBE21C0000D00E9 /* QrBill */ = {
 			isa = PBXGroup;
 			children = (
+				C5A736921EBEA9B3000D00E9 /* GetDataFromHttps.swift */,
 				C5A736501EBE21C0000D00E9 /* AppDelegate.swift */,
-				C5A7368A1EBE82FC000D00E9 /* parceXMLData.swift */,
 				C5A736821EBE3C6E000D00E9 /* ResultTableViewController.swift */,
+				C5A7368A1EBE82FC000D00E9 /* parceXMLData.swift */,
 				C5A736881EBE6F1A000D00E9 /* parceJSONData.swift */,
 				C5A7368E1EBEA0B6000D00E9 /* defineOfData.swift */,
 				C5A736861EBE6CAE000D00E9 /* MenuItem.swift */,
@@ -532,6 +532,7 @@
 				C5A736771EBE21C0000D00E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5A736781EBE21C0000D00E9 /* Build configuration list for PBXNativeTarget "QrBillTests" */ = {
 			isa = XCConfigurationList;
@@ -540,6 +541,7 @@
 				C5A7367A1EBE21C0000D00E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C5A7367B1EBE21C0000D00E9 /* Build configuration list for PBXNativeTarget "QrBillUITests" */ = {
 			isa = XCConfigurationList;
@@ -548,6 +550,7 @@
 				C5A7367D1EBE21C0000D00E9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};

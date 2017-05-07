@@ -13,19 +13,19 @@ func defineDataType()-> String {
     
     if nsStringQrData.contains("https") {
         if nsStringQrData.contains("json") {
-            //print("https_Json")
-            return "https_Json"
+            print("https_Json")
+            return "https_JSON"
         } else {
-           // print("https_xml")
-            return "https_xml"
+            print("https_xml")
+            return "https_XML"
         }
     } else {
         if nsStringQrData.contains("xml") {
             //print("xml")
-            return "xml"
+            return "XML"
         } else {
             //print("Json")
-            return "Json"
+            return "JSON"
         }
     }
 }

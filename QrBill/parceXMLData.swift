@@ -8,8 +8,73 @@
 
 import Foundation
 
-func xmlPars(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) -> [MenuItem] {
+
+func xmlParce(sourceString: String ) -> [MenuItem] {
     var currentMenuItem = [MenuItem]()
+    
+    print("_____________")
+    print(sourceString)
+    print("_____________")
+    
+    let separators = CharacterSet(charactersIn: "<,>")
+    
+    
+    var currentArrey = [String]()
+    
+   var tempArray = sourceString.components(separatedBy: separators)
+    var counter = 0
+    for i in tempArray {
+        
+        if i == "name" || i == "price" || i == "quantity" {
+            currentArrey.append(tempArray[counter])
+            currentArrey.append(tempArray[counter + 1])
+        
+        
+        }
+        counter += 1
+    }
+
+    
+    for i in currentArrey {
+        print(i)
+    }
+    print("xml was parsed")
+    
+    var count = 0
+    
+    let item = MenuItem()
+    
+    for i in currentArrey {
+        
+        if i == "name" {
+            item.name = currentArrey[count+1]
+        }
+        if i == "price" {
+            item.price = Double(currentArrey[count+1])!
+        }
+        if i == "quantity"{
+            item.quantity = Int(currentArrey[count+1])!
+            currentMenuItem.append(item)
+            
+        }
+        count += 1
+    }
+    
+    
+    
+    
+    return currentMenuItem
+}
+
+
+
+
+
+
+
+
+//func xmlPars(_ parser: XMLParser, didStartElement elementName: String, namespaceURI: String?, qualifiedName qName: String?, attributes attributeDict: [String : String]) -> [MenuItem] {
+   // var currentMenuItem = [MenuItem]()
     
     //if elementName == "tag" {
         //let tempTag = [Tag]() ;
@@ -33,8 +98,6 @@ func xmlPars(_ parser: XMLParser, didStartElement elementName: String, namespace
         
 //        currentMenuItem.append(tempTag);
   //}
-   return currentMenuItem
-}
-
+//
 
 
