@@ -2,7 +2,7 @@ import UIKit
 
 var globalValue = [MenuItem]()
 
-class ResultTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, XMLParserDelegate{
+class ResultTableViewController: UIViewController, UITableViewDelegate, UITableViewDataSource, XMLParserDelegate {
 
     var menuItem = [MenuItem]()
     var reverseMenuItem = [MenuItem]()
@@ -49,11 +49,11 @@ class ResultTableViewController: UIViewController, UITableViewDelegate, UITableV
             menuItem = xmlParce(sourceString: "\(nsStringQrData)")
             break
         case "https_XML":
-            print("Fuck xml vs https parsing")
+            print("xml vs https parsing")
+            menuItem = getJsonAndParceFromHttps(sourceString: "\(qrData!)")
             break
         case "https_JSON":
-            
-            menuItem = getJsonAndParceFromHttps()
+            menuItem = getJsonAndParceFromHttps(sourceString: "\(qrData!)")
             for i in menuItem {
                 print(i.name)
                 print(i.price)
